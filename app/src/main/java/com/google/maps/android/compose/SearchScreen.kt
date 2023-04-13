@@ -28,7 +28,7 @@ fun SearchScreen(
     modifier: Modifier = Modifier
 ) {
 
-    val mapL = mainViewModel.movieListResponse
+    val mapL = mainViewModel.mapListResponse
     val value = mainViewModel.countryValue
     Scaffold(
         modifier = Modifier

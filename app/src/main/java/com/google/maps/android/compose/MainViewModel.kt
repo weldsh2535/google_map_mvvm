@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 
 
 class MainViewModel : ViewModel() {
-    var movieListResponse:List<MapDataItem> by mutableStateOf(listOf())
+    var mapListResponse:List<MapDataItem> by mutableStateOf(listOf())
     var errorMessage: String by mutableStateOf("")
     var countryValue:String by mutableStateOf("")
     var LocationUiState:Location by mutableStateOf(
@@ -39,13 +39,13 @@ class MainViewModel : ViewModel() {
             val apiService = ApiService.getInstance()
             try {
                 val movieList = apiService.getMap(country = countryValue)
-                movieListResponse = movieList
+                mapListResponse = movieList
             }
             catch (e: Exception) {
-                Log.d("viewModelMessage error",movieListResponse.toString())
+                Log.d("viewModelMessage error",mapListResponse.toString())
                 errorMessage = e.message.toString()
             }
-            Log.d("viewModelMessage",movieListResponse.toString())
+            Log.d("viewModelMessage",mapListResponse.toString())
         }
     }
 
