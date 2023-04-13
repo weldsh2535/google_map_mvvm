@@ -11,8 +11,6 @@ import com.google.maps.android.compose.model.Location
 import com.google.maps.android.compose.model.MapDataItem
 import kotlinx.coroutines.launch
 
-
-
 class MainViewModel : ViewModel() {
     var mapListResponse:List<MapDataItem> by mutableStateOf(listOf())
     var errorMessage: String by mutableStateOf("")

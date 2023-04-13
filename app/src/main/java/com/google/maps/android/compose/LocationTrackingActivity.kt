@@ -31,10 +31,6 @@ import kotlin.random.Random
 private const val TAG = "LocationTrackActivity"
 private const val zoom = 8f
 
-/**
- * This shows how to use a custom location source to show a blue dot on the map based on your own
- * locations.
- */
 class LocationTrackingActivity : AppCompatActivity() {
 
     private val locationSource = MyLocationSource()
@@ -123,10 +119,6 @@ class LocationTrackingActivity : AppCompatActivity() {
     }
 }
 
-/**
- * A [LocationSource] which allows it's location to be set. In practice you would request location
- * updates (https://developer.android.com/training/location/request-updates).
- */
 private class MyLocationSource : LocationSource {
 
     private var listener: OnLocationChangedListener? = null
